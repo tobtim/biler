@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+    <div id=pakker>
+        <h1>Biler</h1>
+        <br>
+        <a href="/">Hjem </a>
+        <a href="/grid">Grid </a>
+        <br>
+        <br>
+        <table>
+            <thead>
+                <th>Merke</th>
+                <th>Modell</th>
+                <th>Bilde</th>
+                <th>Årstall</th>
+            </thead>
+            <tbody>
+                {% for topp in biler %}
+                <tr>
+                    <td>{{ topp.merke }}</td>
+                    <td>{{ topp.modell }}</td>
+                    <td><img src="static/img/{{topp.bilde}}" alt=""></td>
+                    <td>{{ topp.årstall }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
