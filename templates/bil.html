@@ -11,13 +11,16 @@
   </head>
 
   <body>
+    <header>
+      <div id="logo">
+        <img src="../static/img/logo.PNG" alt="logo">
+      </div>
+      <nav>
+          <a href="/">Hjem </a>
+          <a href="/grid">Grid </a>
+      </nav>    
+    </header>
     <div id="pakker">
-      <h1>Biler</h1>
-      <br />
-      <a href="/">Hjem</a>
-      <a href="/grid">Grid</a>
-      <br />
-      <br />
       <div id="fjell">
         {% for topp in biler %}
         <a href="/grid">
@@ -31,5 +34,10 @@
         {% endfor %}
       </div>
     </div>
+    <footer>
+      <h2>biler.com</h2>
+      <p>rajith@hotmail.no</p>
+      <p>tobias@gmail.no</p>
+    </footer>
   </body>
 </html>
