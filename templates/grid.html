@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biler</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
 
-</head>
-
-<body>
-    <div id=pakker>
-        <h1>Biler</h1>
-        <br>
-        <a href="/">Hjem</a>
-        <a href="/grid">Grid</a>
-        <br>
-        <br>
-        <div id="grid">
-            {% for topp in biler %}
-            <a href="/fjell/{{topp.id}}">
-                <div>
-                    <img src="static/img/{{topp.bilde}}" alt="">
-                    <h3>{{topp.merke}}</h3>
-                    <h4>{{topp.modell}}</h4>
-                    <p>{{topp.årstall}}</p>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
+  <body>
+    <div id="pakker">
+      <h1>Biler</h1>
+      <br />
+      <a href="/">Hjem</a>
+      <a href="/grid">Grid</a>
+      <br />
+      <br />
+      <div id="grid">
+        {% for topp in biler %}
+        <a href="/fjell/{{topp.id}}">
+          <div>
+            <img src="static/img/{{topp.bilde}}" alt="" />
+            <h3>{{topp.merke}}</h3>
+            <h4>{{topp.modell}}</h4>
+            <p>{{topp.årstall}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
