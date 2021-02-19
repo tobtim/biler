@@ -31,7 +31,7 @@ def index():
 
 @app.route("/grid")
 def grid():
-    biler = db.engine.execute("SELECT * FROM biler ORDER BY årstall DESC")
+    biler = db.engine.execute("SELECT * FROM biler ORDER BY årstall ASC")
 
     return render_template("grid.html", biler=biler)
 
