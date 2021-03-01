@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
 }
 body {
-  background-color: darkgray;
+  background-color: rgb(255, 116, 2);
 }
 #logo img {
   width: 100%;
@@ -41,7 +41,7 @@ nav a {
   margin-bottom: 0px;
 }
 nav a:hover {
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid greenyellow;
 }
 #pakker {
   max-width: 700px;
@@ -75,7 +75,7 @@ nav a:hover {
 
 #grid div:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 7px 7px orange;
+  box-shadow: 3px 3px 7px 7px greenyellow;
 }
 #grid img {
   width: 100%;
