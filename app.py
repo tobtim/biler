@@ -43,4 +43,13 @@ def bil(id):
     return render_template("bil.html", biler=biler)
 
 
+@app.route("/bil/<aar>")
+def aar(aar):
+    biler = db.engine.execute(
+        f"SELECT * FROM biler WHERE årstall BETWEEN {aar} AND {aar+9}"
+    )
+
+    return render_template("aar.html", biler=biler)
+
+
 app.run(debug=True)

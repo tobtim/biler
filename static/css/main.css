@@ -5,7 +5,10 @@ body {
   padding: 0%;
   font-family: "Fira Sans Extra Condensed", sans-serif;
 }
-
+#liste {
+  display: flex;
+  flex-direction: column;
+}
 nav {
   display: flex;
   flex-direction: row;
