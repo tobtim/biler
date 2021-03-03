@@ -36,6 +36,13 @@ def grid():
     return render_template("grid.html", biler=biler)
 
 
+@app.route("/sortering")
+def sortering():
+    biler = db.engine.execute("SELECT * FROM biler ORDER BY årstall ASC")
+
+    return render_template("sortering.html", biler=biler)
+
+
 @app.route("/fjell/<id>")
 def bil(id):
     biler = db.engine.execute(f"SELECT * FROM biler WHERE id={id}")
@@ -43,10 +50,11 @@ def bil(id):
     return render_template("bil.html", biler=biler)
 
 
-@app.route("/bil/<aar>")
-def aar(aar):
+@app.route("/aar/<a>")
+def aar(a):
+    a = int(a)
     biler = db.engine.execute(
-        f"SELECT * FROM biler WHERE årstall BETWEEN {aar} AND {aar+9}"
+        f"SELECT * FROM biler WHERE årstall BETWEEN {a} AND {a+9}"
     )
 
     return render_template("aar.html", biler=biler)

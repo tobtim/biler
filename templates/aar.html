@@ -22,11 +22,11 @@
       </nav>    
     </header>
     <div id="pakker">
-      <div id="fjell">
+      <div id="grid">
         {% for topp in biler %}
-        <a href="/grid">
+        <a href="/fjell/{{topp.id}}">
           <div>
-            <img src="../../static/img/{{topp.bilde}}" alt="" />
+            <img src="/../static/img/{{topp.bilde}}" alt="" />
             <h3>{{topp.merke}}</h3>
             <h4>{{topp.modell}}</h4>
             <p>{{topp.årstall}}</p>

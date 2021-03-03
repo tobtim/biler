@@ -69,7 +69,13 @@ nav a:hover {
   background-color: lightgrey;
   padding: 10px;
 }
-
+#liste a {
+  margin: 10px;
+  border-bottom: 1px solid transparent;
+}
+#liste a:hover {
+  border-bottom: 1px solid yellowgreen;
+}
 #grid div {
   background-color: lightgrey;
   border: 2px solid gray;
