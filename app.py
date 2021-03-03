@@ -60,4 +60,12 @@ def aar(a):
     return render_template("aar.html", biler=biler)
 
 
+@app.route("/merke/<m>")
+def merke(m):
+    m = str(m)
+    biler = db.engine.execute(f"SELECT * FROM biler WHERE merke = '{m}'")
+
+    return render_template("merke.html", biler=biler)
+
+
 app.run(debug=True)

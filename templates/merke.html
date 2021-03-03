@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RajTob</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link rel="shortcut icon" type="image/png" href="/static/img/logo-removebg-preview.png">
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <img src="../static/img/logo.PNG" alt="logo">
+      </div>
+      <nav>
+          <a href="/">Hjem </a>
+          <a href="/grid">Grid </a>
+          <a href="/sortering">Sortering</a>
+      </nav>    
+    </header>
+    <div id="pakker">
+      <div id="grid">
+        {% for topp in biler %}
+        <a href="/fjell/{{topp.id}}">
+          <div>
+            <img src="/../static/img/{{topp.bilde}}" alt="" />
+            <h3>{{topp.merke}}</h3>
+            <h4>{{topp.modell}}</h4>
+            <p>{{topp.årstall}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <footer>
+      <h2>rajtob.com</h2>
+      <p>rajith@hotmail.no</p>
+      <p>tobias@gmail.no</p>
+    </footer>
+  </body>
+</html>
