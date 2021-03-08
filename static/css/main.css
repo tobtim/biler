@@ -118,7 +118,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   color: azure;
+  background-color: grey;
 }
+
 
 table img {
   width: 100%;
