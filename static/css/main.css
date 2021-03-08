@@ -44,7 +44,8 @@ nav a {
   margin-bottom: 0px;
 }
 nav a:hover {
-  border-bottom: 1px solid greenyellow;
+  border-bottom: 1px solid rgb(255, 116, 2);
+
 }
 #pakker {
   max-width: 700px;
@@ -74,17 +75,17 @@ nav a:hover {
   border-bottom: 1px solid transparent;
 }
 #liste a:hover {
-  border-bottom: 1px solid yellowgreen;
+  border-bottom: 1px solid #f7e7ce;
 }
 #grid div {
-  background-color: lightgrey;
-  border: 2px solid gray;
+  background-color: grey;
+  border: 2px solid black;
   padding: 10px;
 }
 
 #grid div:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 7px 7px greenyellow;
+  box-shadow: 3px 3px 7px 7px black;
 }
 #grid img {
   width: 100%;
@@ -126,7 +127,7 @@ table img {
 a h4,
 h3,
 p {
-  color: black;
+  color: white;
   text-decoration: none;
   margin-right: 10px;
 }
