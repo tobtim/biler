@@ -54,7 +54,7 @@ def bil(id):
 def aar(a):
     a = int(a)
     biler = db.engine.execute(
-        f"SELECT * FROM biler WHERE årstall BETWEEN {a} AND {a+9}"
+        f"SELECT * FROM biler WHERE årstall BETWEEN {a} AND {a+9} ORDER BY årstall ASC"
     )
 
     return render_template("aar.html", biler=biler)
@@ -63,7 +63,9 @@ def aar(a):
 @app.route("/merke/<m>")
 def merke(m):
     m = str(m)
-    biler = db.engine.execute(f"SELECT * FROM biler WHERE merke = '{m}'")
+    biler = db.engine.execute(
+        f"SELECT * FROM biler WHERE merke = '{m}' ORDER BY årstall ASC"
+    )
 
     return render_template("merke.html", biler=biler)
 
