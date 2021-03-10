@@ -68,8 +68,8 @@ nav a:hover {
   grid-template-columns: repeat(1fr);
   grid-gap: 20px;
   text-align: center;
-  border: 2px solid gray;
-  background-color: lightgrey;
+  border: 2px solid black;
+  background-color: grey;
   padding: 10px;
 }
 #liste a {
@@ -152,7 +152,7 @@ p {
   margin-right: 10px;
 }
 footer {
-  min-height: 200px;
+  min-height: 250px;
   background-color: #72787f;
   padding: 20px;
   margin-top: 20px;
