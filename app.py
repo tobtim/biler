@@ -43,7 +43,7 @@ def sortering():
     return render_template("sortering.html", biler=biler)
 
 
-@app.route("/fjell/<id>")
+@app.route("/bil/<id>")
 def bil(id):
     biler = db.engine.execute(f"SELECT * FROM biler WHERE id={id}")
 
