@@ -50,6 +50,15 @@ def bil(id):
     return render_template("bil.html", biler=biler)
 
 
+@app.route("/bil")
+def ekstra():
+    biler = db.engine.execute(
+        "SELECT * FROM biler WHERE id = SELECT FLOOR(RAND()*(25-10+1))+10"
+    )
+
+    return render_template("ekstra.html", biler=biler)
+
+
 @app.route("/aar/<a>")
 def aar(a):
     a = int(a)

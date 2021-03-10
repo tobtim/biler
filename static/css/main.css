@@ -62,7 +62,7 @@ nav a:hover {
   grid-gap: 20px;
   text-align: center;
 }
-#fjell {
+#info {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(1fr);
@@ -109,7 +109,7 @@ nav a:hover {
 #grid img {
   width: 100%;
 }
-#fjell img {
+#info img {
   width: 100%;
 }
 
