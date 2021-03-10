@@ -8,6 +8,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+#merke {
+  display: flex;
+  flex-direction: column;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -43,8 +47,12 @@ nav a {
   margin-bottom: 0px;
 }
 nav a:hover {
+<<<<<<< HEAD
   border-bottom: 2px solid black;
 
+=======
+  border-bottom: 1px solid rgb(255, 116, 2);
+>>>>>>> 5cd86cea2efbd032973ebf4253cebe574011dd5f
 }
 #pakker {
   max-width: 700px;
@@ -76,12 +84,28 @@ nav a:hover {
 #liste a:hover {
   border-bottom: 1px solid #f7e7ce;
 }
+#merke a {
+  margin: 10px;
+  border-bottom: 1px solid transparent;
+}
+#merke a:hover {
+  border-bottom: 1px solid yellowgreen;
+}
 #grid div {
   background-color: grey;
   border: 2px solid black;
   padding: 10px;
 }
-
+#sortering {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+}
+#sortering img {
+  width: 100%;
+}
 #grid div:hover {
   cursor: pointer;
   box-shadow: 3px 3px 7px 7px black;
