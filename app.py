@@ -53,8 +53,9 @@ def bil(id):
 @app.route("/car", methods=["GET"])
 def ekstra():
     name = request.args.get("name")
-    biler = db.engine.execute(f"SELECT * FROM biler WHERE modell LIKE '%{name}%'")
-
+    biler = db.engine.execute(
+        f"SELECT * FROM biler WHERE modell LIKE '%{name}%' OR merke LIKE '%{name}%'"
+    )
     return render_template("ekstra.html", biler=biler)
 
 
