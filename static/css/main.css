@@ -36,7 +36,7 @@ body {
   margin-left: 20px;
   color: aliceblue;
 }
-nav a {
+nav a, form {
   color: aliceblue;
   padding: 10px;
   text-align: center;
@@ -53,6 +53,7 @@ nav a:hover {
   max-width: 700px;
   margin: auto;
   margin-top: 10px;
+  min-height: 500px;
 }
 
 #grid {

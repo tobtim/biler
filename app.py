@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -50,10 +50,10 @@ def bil(id):
     return render_template("bil.html", biler=biler)
 
 
-@app.route("/bil/<name>")
-def ekstra(name):
-    name = ustang
-    biler = db.engine.execute(f"SELECT * FROM biler WHERE modell LIKE %{name}%")
+@app.route("/car", methods=["GET"])
+def ekstra():
+    name = request.args.get("name")
+    biler = db.engine.execute(f"SELECT * FROM biler WHERE modell LIKE '%{name}%'")
 
     return render_template("ekstra.html", biler=biler)
 

@@ -19,12 +19,11 @@
           <a href="/">Hjem </a>
           <a href="/grid">Grid </a>
           <a href="/sortering">Sortering</a>
-          <a href="/bil">Søk</a>
+          <form action="/car" method="get"> 
+            <input autocomplete="off" autofocus name="name" type="text"> 
+            <input type="submit" value="Søk"> 
       </nav>    
     </header>
-
-    <input autocomplete="off" autofocus name="name" type="text"> 
-        <input type="submit" value="Søk"> 
         
     <div id="pakker">
       <div id="info">
@@ -38,6 +37,7 @@
           </div>
         </a>
         {% endfor %}
+        <h1>404 System error 404</h1>
       </div>
     </div>
     <footer>
