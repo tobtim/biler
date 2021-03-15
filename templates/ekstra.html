@@ -19,8 +19,13 @@
           <a href="/">Hjem </a>
           <a href="/grid">Grid </a>
           <a href="/sortering">Sortering</a>
+          <a href="/bil">Søk</a>
       </nav>    
     </header>
+
+    <input autocomplete="off" autofocus name="name" type="text"> 
+        <input type="submit" value="Søk"> 
+        
     <div id="pakker">
       <div id="info">
         {% for topp in biler %}

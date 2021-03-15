@@ -50,11 +50,10 @@ def bil(id):
     return render_template("bil.html", biler=biler)
 
 
-@app.route("/bil")
-def ekstra():
-    biler = db.engine.execute(
-        "SELECT * FROM biler WHERE id = SELECT FLOOR(RAND()*(25-10+1))+10"
-    )
+@app.route("/bil/<name>")
+def ekstra(name):
+    name = ustang
+    biler = db.engine.execute(f"SELECT * FROM biler WHERE modell LIKE %{name}%")
 
     return render_template("ekstra.html", biler=biler)
 
