@@ -34,12 +34,12 @@
                 <th>Årstall</th>
             </thead>
             <tbody>
-                {% for topp in biler %}
+                {% for bil in biler %}
                 <tr>
-                    <td>{{ topp.merke }}</td>
-                    <td>{{ topp.modell }}</td>
-                    <td><img src="static/img/{{topp.bilde}}" alt=""></td>
-                    <td>{{ topp.årstall }}</td>
+                    <td>{{ bil.merke }}</td>
+                    <td>{{ bil.modell }}</td>
+                    <td><img src="static/img/{{bil.bilde}}" alt=""></td>
+                    <td>{{ bil.årstall }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

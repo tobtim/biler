@@ -27,13 +27,13 @@
         
     <div id="pakker">
       <div id="info">
-        {% for topp in biler %}
+        {% for bil in biler %}
         <a href="/grid">
           <div>
-            <img src="../../static/img/{{topp.bilde}}" alt="" />
-            <h3>{{topp.merke}}</h3>
-            <h4>{{topp.modell}}</h4>
-            <p>{{topp.årstall}}</p>
+            <img src="../../static/img/{{bil.bilde}}" alt="" />
+            <h3>{{bil.merke}}</h3>
+            <h4>{{bil.modell}}</h4>
+            <p>{{bil.årstall}}</p>
           </div>
         </a>
         {% endfor %}

@@ -54,7 +54,7 @@ def bil(id):
 def ekstra():
     name = request.args.get("name")
     biler = db.engine.execute(
-        f"SELECT * FROM biler WHERE modell LIKE '%{name}%' OR merke LIKE '%{name}%'"
+        f"SELECT * FROM biler WHERE modell LIKE '%{name}%' OR merke LIKE '%{name}%' ORDER BY årstall ASC"
     )
     return render_template("ekstra.html", biler=biler)
 

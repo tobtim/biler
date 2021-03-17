@@ -86,7 +86,7 @@ nav a:hover {
   border-bottom: 1px solid transparent;
 }
 #merke a:hover {
-  border-bottom: 1px solid yellowgreen;
+  border-bottom: 1px solid #f7e7ce;
 }
 #grid div {
   background-color: grey;
