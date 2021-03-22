@@ -36,7 +36,8 @@ body {
   margin-left: 20px;
   color: aliceblue;
 }
-nav a, form {
+nav a,
+form {
   color: aliceblue;
   padding: 10px;
   text-align: center;
@@ -119,6 +120,9 @@ h1 {
   text-align: center;
   color: aliceblue;
 }
+h1.a {
+  visibility: hidden;
+}
 
 a {
   color: aliceblue;
@@ -164,4 +168,35 @@ footer h2 {
 }
 footer p {
   color: aliceblue;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: #72787f;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #sortering {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+  }
+  h1.a {
+    display: none;
+  }
+  #grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+  }
 }
